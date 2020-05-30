@@ -1,0 +1,5 @@
+ansible -i hosts all -m apt -a "name=cmatrix state=present" -b
+
+ansible -i hosts Database -m apt -a "update_cache=yes name=cmatrix state=present" -b
+ansible -i hosts Database -m shell -a "uptime"
+ansible -i hosts all -m shell -a "ip a"

@@ -1,0 +1,11 @@
+---
+  - name: Webservers group
+    hosts: Webservers
+    become: yes
+    remote_user: root
+    tasks:   
+      - name: Installing Nginx
+	apt:	
+	  name: nginx
+	  state: present
+
